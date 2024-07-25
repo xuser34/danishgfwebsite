@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy 18th Birthday!</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #ffdcef;
+            color: #F6F8F0;
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        .container {
+            background-color: rgba(255, 255, 255, 0.9);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+            max-width: 800px;
+            text-align: center;
+        }
+
+        header {
+            background-color: #FFC5E5;
+            color: #F6F8F0;
+            padding: 15px;
+            border-radius: 10px;
+            border: 2px solid #FFC5E5;
+            animation: fadeIn 2s;
+            margin-bottom: 20px;
+        }
+
+        h1 {
+            color: #ff69b4;
+            animation: slideInFromLeft 2s ease-in-out;
+        }
+
+        @keyframes slideInFromLeft {
+            from { transform: translateX(-100%); }
+            to { transform: translateX(0); }
+        }
+
+        p {
+            font-size: 1.2em;
+            margin: 10px 0;
+            animation: slideInFromRight 2s ease-in-out;
+            padding: 10px;
+            background-color: #ff69b4; /* Pink background */
+            border: 5px solid #ff69b4; /* Pink border */
+            border-radius: 10px;
+            color: #fff; /* White text color for contrast */
+        }
+
+        @keyframes slideInFromRight {
+            from { transform: translateX(100%); }
+            to { transform: translateX(0); }
+        }
+
+        .carousel-container {
+            display: flex;
+            justify-content: center; /* Center the carousel horizontally */
+            align-items: center; /* Center the carousel vertically */
+            margin: 20px 0;
+        }
+
+        .carousel {
+            display: flex;
+            overflow: hidden;
+            position: relative;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+            background-color: transparent;
+            width: 100%;
+            max-width: 600px; /* Max width for the carousel */
+            height: 400px; /* Fixed height for the carousel */
+            align-items: center; /* Center images vertically within the carousel */
+        }
+
+        .carousel img {
+            width: 100%; /* Ensures image takes full width of the carousel */
+            height: 100%; /* Ensures image takes full height of the carousel */
+            object-fit: cover; /* Keeps aspect ratio and covers the container */
+            border-radius: 10px;
+            display: none; /* Hide all images initially */
+        }
+
+        .carousel img:first-of-type {
+            display: block; /* Show the first image by default */
+        }
+
+        .carousel-controls {
+            position: absolute;
+            top: 50%;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            transform: translateY(-50%);
+        }
+
+        .carousel-controls button {
+            background-color: #ff69b4;
+            border: none;
+            color: white;
+            padding: 10px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .carousel-controls button:hover {
+            background-color: #ff4081;
+        }
+
+        .messages {
+            margin-bottom: 20px;
+        }
+
+        button {
+            background-color: #ff69b4;
+            color: #F6F8F0;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: background-color 0.3s, transform 0.2s;
+            border: 2px solid #FFC5E5;
+            animation: fadeIn 2s;
+        }
+
+        button:hover {
+            background-color: #FFC5E5;
+            transform: scale(1.05);
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Happy 18th Birthday, Yuana!</h1>
+        </header>
+        <section class="messages">
+            <p>You are the best thing that ever happened to me. I am so grateful for every moment we have shared together. Happy Birthday, my love! Happy Birthday my love. I love you so goddamn much. Thank you for always being with me and supporting me. Thank you for everything you've done for me. You're so beautiful and amazing, one of the strongest, loving, caring, kind-hearted people. I apologize for all my mistakes and I'm sorry for hurting you throughout this relationship. Every fight and happy moment, I want you to know that I truly treasure you. You're the only girl that has seen my soft side and you're very special. I will never regret loving you and may Allah bless you with everything and anything and protect you wherever you go. You are more than enough. So cute you. I love you so much Nur Yuana Yuanie Binte Yusri in this dunya and the hereafter.</p>
+            <button id="show-more">Show More</button>
+            <div id="extra-messages" style="display: none;">
+                <p>HAPPY 18th BIRTHDAYY!!</p>
+                <p>Dah go enroll car NOWW!!</p>
+            </div>
+        </section>
+        <section class="carousel-container">
+            <div class="carousel">
+                <img src="dgf1.jpg" alt="Photo 1">
+                <img src="dgf2.jpg" alt="Photo 2">
+                <img src="dgf3.jpg" alt="Photo 3">
+                <img src="dgf4.jpg" alt="Photo 4">
+                <img src="dgf5.jpg" alt="Photo 5">
+                <img src="dgf6.jpg" alt="Photo 6">
+                <img src="dgf7.jpg" alt="Photo 7">
+                <img src="dgf8.jpg" alt="Photo 8">
+                <img src="dgf9.jpg" alt="Photo 9">
+                <img src="dgf10.jpg" alt="Photo 10">
+                <img src="dgf11.jpg" alt="Photo 11">
+                <img src="dgf12.jpg" alt="Photo 12">
+                <div class="carousel-controls">
+                    <button onclick="prevImage()">Previous</button>
+                    <button onclick="nextImage()">Next</button>
+                </div>
+            </div>
+        </section>
+    </div>
+    <script>
+        let currentIndex = 0;
+        const images = document.querySelectorAll('.carousel img');
+
+        function showImage(index) {
+            images.forEach((img, i) => {
+                img.style.display = i === index ? 'block' : 'none';
+            });
+        }
+
+        function prevImage() {
+            currentIndex = (currentIndex > 0) ? currentIndex - 1 : images.length - 1;
+            showImage(currentIndex);
+        }
+
+        function nextImage() {
+            currentIndex = (currentIndex < images.length - 1) ? currentIndex + 1 : 0;
+            showImage(currentIndex);
+        }
+
+        // Initialize the carousel
+        showImage(currentIndex);
+
+        document.getElementById('show-more').addEventListener('click', function() {
+            const extraMessages = document.getElementById('extra-messages');
+            if (extraMessages.style.display === 'none') {
+                extraMessages.style.display = 'block';
+                this.textContent = 'Show Less';
+            } else {
+                extraMessages.style.display = 'none';
+                this.textContent = 'Show More';
+            }
+        });
+    </script>
+</body>
+</html>
